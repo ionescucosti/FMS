@@ -1,0 +1,32 @@
+version: '3'
+
+services:
+  rabbitmq:
+    image: "rabbitmq:3-management"
+    ports:
+      - "5672:5672"  # RabbitMQ default port
+      - "15672:15672"  # RabbitMQ management plugin port
+    environment:
+      RABBITMQ_DEFAULT_USER: "guest"
+      RABBITMQ_DEFAULT_PASS: "guest"
+
+
+  fleet-management-service:
+    build:
+      context: ./fleet_management_service
+    ports:
+      - "8000:8000"
+
+  gps_simulator_service:
+    build:
+      context: ./gps_simulator_service
+    ports:
+      - "8002:8001"
+
+  vehicle_monitoring_system_service:
+    build:
+      context: ./vehicle_monitoring_system_service
+    ports:
+      - "8003:8002"
+
+
