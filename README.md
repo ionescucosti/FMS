@@ -1,10 +1,10 @@
 ## Fleet Management System (FMS)
 ### contains 3 microservices:
 - fleet-management-service: APIs http://0.0.0.0:8000/docs
+                            consumer that get events from queue='penalty_points' and update driver's points in db 
 - gps_simulator_service: mockup to produce event for driver with id 1 and publish to queue = 'gps'
 - vehicle_monitoring_system_service: check all events from queue = 'gps', apply penalty points and publish them 
   to queue='penalty_points'
-- fleet-management-service: consumer that get events from queue='penalty_points' and update driver's points in db 
 
 
 
