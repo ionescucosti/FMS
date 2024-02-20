@@ -24,13 +24,12 @@
     RUN pip install --no-cache-dir -r requirements.txt
     CMD uvicorn main:app --host 0.0.0.0 --port 8000
     CMD python consumer.py
-- 
+
 - cd /gps_simulator_service:
     RUN pip install --upgrade pip
     RUN pip install --no-cache-dir -r requirements.txt
     CMD uvicorn gps_simulator_service:app
     
-
 - cd /vehicle_monitoring_system_service
     RUN pip install --upgrade pip
     RUN pip install --no-cache-dir -r requirements.txt
