@@ -9,8 +9,12 @@
 
 
 ### Run docker-compose.yml to build and run docker images for each service:
-cd /FMS
-docker-compose up --build
+- cd /FMS
+- docker-compose up --build
+
+
+
+
 
 
 ### In order to run project locally:
